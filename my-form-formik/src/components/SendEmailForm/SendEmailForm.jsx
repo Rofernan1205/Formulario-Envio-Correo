@@ -1,6 +1,7 @@
 import "./SendEmailForm.css";
 import { Formik } from "formik";
 import * as Yup from "yup";
+import emailjs from "@emailjs/browser";
 
 export const SendEmailForm = () => {
   const validationSchema = Yup.object().shape({
@@ -12,6 +13,31 @@ export const SendEmailForm = () => {
       .required("El correo es obligatorio"),
     mensaje: Yup.string().required("El campo es obligatorio"),
   });
+
+  const sendEmail = (values, event) => {
+    emailjs
+      .send(
+        "service_gue9y7i", // Reemplaza con tu Service ID de EmailJS
+        "template_l6erzok", // Reemplaza con tu Template ID de EmailJS
+        {
+          nombre: values.nombre,
+          correo: values.correo,
+          mensaje: values.mensaje,
+        },
+        "oioRTvsNy5Xz_BAOv" // Reemplaza con tu Public Key de EmailJS
+      )
+      .then((response) => {
+       
+          console.log("Enviado" + response);
+          event.resetForm();
+          event.setSubmitting(false);
+       
+      })
+      .catch((error) => {
+        event.setSubmitting(false);
+        console.log("Correo no se pudo enviar: " + error);
+      });
+  };
 
   return (
     <div className="body-form d-flex justify-content-center  align-items-center">
@@ -27,11 +53,8 @@ export const SendEmailForm = () => {
               mensaje: "",
             }}
             validationSchema={validationSchema}
-            onSubmit={(values, { resetForm, setSubmitting }) => {
-              setTimeout(() => {
-                setSubmitting(false);
-                resetForm();
-              }, 5000);
+            onSubmit={(values, event) => {
+              sendEmail(values, event);
             }}
           >
             {({
