@@ -1,0 +1,70 @@
+.body-form{
+width: 600px;                                    
+}
+
+.form-container{
+    
+    margin: 20px;
+    border-radius: 25px;
+    width: 70%;
+    height: auto;
+    -webkit-box-shadow: 0px 0px 10px 6px rgba(124,133,145,0.97); 
+    box-shadow: 0px 0px 10px 6px rgba(124,133,145,0.97);
+   
+}
+.body-form h1{
+    color: rgba(12, 107, 216, 0.661);
+    font-family: "Oswald", serif;
+    font-weight: 600;
+}
+
+.body-form .btn.btn-primary{
+    background-color: rgba(12, 107, 216, 0.661);
+    border: 1px solid rgba(12, 107, 216, 0.661);
+    font-family: "Oswald", serif;
+    font-weight: 400;
+    font-size: 25px;
+    margin-bottom: 45px;
+}
+
+.body-form .btn.btn-primary:hover{
+    background-color: rgba(4, 86, 180, 0.661);
+    border: 1px solid rgba(4, 86, 180, 0.661);
+    font-family: "Oswald", serif;
+    font-weight: 400;
+    font-size: 25px;
+    margin-bottom: 45px;
+}
+
+.body-form .form-label{
+    color: rgba(12, 107, 216, 0.661);
+    font-family: "Oswald", serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.body-form .form-control{
+    border: 1px solid rgba(12, 107, 216, 0.661);
+    font-family: "Oswald", serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.sms-error{
+    font-family: "Oswald", serif;
+    color: red;
+    font-weight: 200;
+    font-style: italic;
+    letter-spacing: 1.5px;
+    font-size: 16px;
+
+}
+.sms-blank{
+    font-family: "Oswald", serif;
+    background-color: transparent;
+    color: transparent;
+    font-weight: 200;
+    font-style: italic;
+    letter-spacing: 1.5px;
+    font-size: 16px;
+}

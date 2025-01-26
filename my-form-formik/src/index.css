@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "Oswald", serif;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;                                       
+    background: hsla(0, 0%, 100%, 1);
+    background: radial-gradient(circle, hsla(0, 0%, 100%, 1) 25%, hsla(203, 56%, 74%, 1) 100%);
+    background: -moz-radial-gradient(circle, hsla(0, 0%, 100%, 1) 25%, hsla(203, 56%, 74%, 1) 100%);
+    background: -webkit-radial-gradient(circle, hsla(0, 0%, 100%, 1) 25%, hsla(203, 56%, 74%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#98C6E2", GradientType=1 );  
+   
+}
+
+.padded-form{
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
